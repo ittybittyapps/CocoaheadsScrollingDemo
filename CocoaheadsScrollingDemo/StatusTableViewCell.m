@@ -4,14 +4,26 @@
 //
 
 #import "StatusTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation StatusTableViewCell
 
 - (void)configureWithStatusDictionary:(NSDictionary *)status
 {
     if ([status objectForKey:@"user"]) {
-        if ([[status objectForKey:@"user"] objectForKey:@"username"]) {
-            self.usernameLabel.text = [[status objectForKey:@"user"] objectForKey:@"username"];
+        NSDictionary *userDict = [status objectForKey:@"user"];
+        
+        if ([userDict objectForKey:@"username"]) {
+            self.usernameLabel.text = [userDict objectForKey:@"username"];
+        }
+        
+        if ([userDict objectForKey:@"avatar_image"]){
+            NSDictionary *avatarDict = [userDict objectForKey:@"avatar_image"];
+            
+            if ([avatarDict objectForKey:@"url"]) {
+                [self.userImageView setImageWithURL:[NSURL URLWithString:[avatarDict objectForKey:@"url"]]];
+            }
+            
         }
     }
     if ([status objectForKey:@"text"]) {
