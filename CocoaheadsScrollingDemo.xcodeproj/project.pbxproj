@@ -19,6 +19,9 @@
 		A891F6D116C3138300107F55 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A891F6CF16C3138300107F55 /* MainStoryboard_iPhone.storyboard */; };
 		A891F6D416C3138300107F55 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A891F6D216C3138300107F55 /* MainStoryboard_iPad.storyboard */; };
 		A891F6D716C3138300107F55 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A891F6D616C3138300107F55 /* ViewController.m */; };
+		A891F6EA16C315DC00107F55 /* feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = A891F6E916C315DC00107F55 /* feed.plist */; };
+		A891F6FA16C3191400107F55 /* StatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A891F6F916C3191400107F55 /* StatusTableViewCell.m */; };
+		A891F6FC16C319B000107F55 /* StatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A891F6FB16C319B000107F55 /* StatusTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,10 @@
 		A891F6D316C3138300107F55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		A891F6D516C3138300107F55 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A891F6D616C3138300107F55 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A891F6E916C315DC00107F55 /* feed.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = feed.plist; sourceTree = "<group>"; };
+		A891F6F816C3191400107F55 /* StatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTableViewCell.h; sourceTree = "<group>"; };
+		A891F6F916C3191400107F55 /* StatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTableViewCell.m; sourceTree = "<group>"; };
+		A891F6FB16C319B000107F55 /* StatusTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +98,9 @@
 				A891F6D216C3138300107F55 /* MainStoryboard_iPad.storyboard */,
 				A891F6D516C3138300107F55 /* ViewController.h */,
 				A891F6D616C3138300107F55 /* ViewController.m */,
+				A891F6F816C3191400107F55 /* StatusTableViewCell.h */,
+				A891F6F916C3191400107F55 /* StatusTableViewCell.m */,
+				A891F6FB16C319B000107F55 /* StatusTableViewCell.xib */,
 				A891F6BE16C3138200107F55 /* Supporting Files */,
 			);
 			path = CocoaheadsScrollingDemo;
@@ -99,6 +109,7 @@
 		A891F6BE16C3138200107F55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A891F6E916C315DC00107F55 /* feed.plist */,
 				A891F6BF16C3138200107F55 /* CocoaheadsScrollingDemo-Info.plist */,
 				A891F6C016C3138200107F55 /* InfoPlist.strings */,
 				A891F6C316C3138200107F55 /* main.m */,
@@ -167,6 +178,8 @@
 				A891F6CE16C3138300107F55 /* Default-568h@2x.png in Resources */,
 				A891F6D116C3138300107F55 /* MainStoryboard_iPhone.storyboard in Resources */,
 				A891F6D416C3138300107F55 /* MainStoryboard_iPad.storyboard in Resources */,
+				A891F6EA16C315DC00107F55 /* feed.plist in Resources */,
+				A891F6FC16C319B000107F55 /* StatusTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +193,7 @@
 				A891F6C416C3138200107F55 /* main.m in Sources */,
 				A891F6C816C3138200107F55 /* AppDelegate.m in Sources */,
 				A891F6D716C3138300107F55 /* ViewController.m in Sources */,
+				A891F6FA16C3191400107F55 /* StatusTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

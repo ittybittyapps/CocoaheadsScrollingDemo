@@ -1,29 +1,54 @@
 //
 //  ViewController.m
-//  CocoaheadsScrollingDemo
-//
-//  Created by Sam Page on 7/02/13.
 //  Copyright (c) 2013 Itty Bitty Apps. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "StatusTableViewCell.h"
 
 @interface ViewController ()
-
+@property (nonatomic, strong) NSArray *feedArray;
 @end
+
+static NSString *kStatusTableViewCellIdentifier = @"kStatusTableViewCellIdentifier";
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *feedPath = [[NSBundle mainBundle] pathForResource:@"feed" ofType:@"plist"];
+    self.feedArray = [NSArray arrayWithContentsOfFile:feedPath];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"StatusTableViewCell" bundle:nil] forCellReuseIdentifier:kStatusTableViewCellIdentifier];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.feedArray.count;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kStatusTableViewCellIdentifier];
+    [cell configureWithStatusDictionary:[self.feedArray objectAtIndex:indexPath.row]];
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100.f;
 }
 
 @end

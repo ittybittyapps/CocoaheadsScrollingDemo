@@ -1,13 +1,10 @@
 //
 //  ViewController.h
-//  CocoaheadsScrollingDemo
-//
-//  Created by Sam Page on 7/02/13.
 //  Copyright (c) 2013 Itty Bitty Apps. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
