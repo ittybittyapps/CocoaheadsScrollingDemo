@@ -41,15 +41,20 @@ static NSString *kStatusTableViewCellIdentifier = @"kStatusTableViewCellIdentifi
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kStatusTableViewCellIdentifier];
-    [cell configureWithStatusDictionary:[self.feedArray objectAtIndex:indexPath.row]];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+#pragma mark - Performance--
     [cell applyShadowToImageView];
     [cell applyCornerRadiusToImageView];
     [cell applyColorWithPatternImageToBackground];
     [cell doSomeCPUIntensiveThings];
     
-//    [cell applyShadowPathToShadow];
-//    [cell applyBackgroundColorToLabels];
+#pragma mark - Performance++
+    [cell applyShadowPathToShadow];
+    [cell applyBackgroundColorToLabels];
+    [cell shouldDrawImage];
+    
+    [cell configureWithStatusDictionary:[self.feedArray objectAtIndex:indexPath.row]];
     
     return cell;
 }

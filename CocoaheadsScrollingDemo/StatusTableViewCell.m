@@ -4,7 +4,6 @@
 //
 
 #import "StatusTableViewCell.h"
-#import "UIImageView+WebCache.h"
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -23,7 +22,7 @@
             NSDictionary *avatarDict = [userDict objectForKey:@"avatar_image"];
             
             if ([avatarDict objectForKey:@"url"]) {
-                [self.userImageView setImageWithURL:[NSURL URLWithString:[avatarDict objectForKey:@"url"]]];
+                [self.userImageView setURL:[NSURL URLWithString:[avatarDict objectForKey:@"url"]]];
             }
         }
     }
@@ -85,5 +84,9 @@
     self.dateLabel.backgroundColor = self.backgroundColor;
 }
 
+- (void)shouldDrawImage
+{
+    self.userImageView.shouldDrawImage = YES;
+}
 
 @end
