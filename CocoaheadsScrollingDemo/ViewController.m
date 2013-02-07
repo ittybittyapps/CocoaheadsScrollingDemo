@@ -43,6 +43,10 @@ static NSString *kStatusTableViewCellIdentifier = @"kStatusTableViewCellIdentifi
     StatusTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kStatusTableViewCellIdentifier];
     [cell configureWithStatusDictionary:[self.feedArray objectAtIndex:indexPath.row]];
     
+    [cell applyShadowToImageView];
+    [cell applyCornerRadiusToImageView];
+    [cell applyShadowPathToShadow];
+    
     return cell;
 }
 

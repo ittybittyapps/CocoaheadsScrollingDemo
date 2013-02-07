@@ -10,7 +10,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *userImageView;
+@property (strong, nonatomic) IBOutlet UIView *shadowView;
 
 - (void)configureWithStatusDictionary:(NSDictionary *)status;
+
+// Performance killers
+- (void)applyCornerRadiusToImageView;
+- (void)applyShadowToImageView;
+
+// Performance revivers
+- (void)applyShadowPathToShadow;
 
 @end
