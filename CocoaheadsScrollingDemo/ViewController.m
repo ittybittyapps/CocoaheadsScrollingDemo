@@ -45,7 +45,11 @@ static NSString *kStatusTableViewCellIdentifier = @"kStatusTableViewCellIdentifi
     
     [cell applyShadowToImageView];
     [cell applyCornerRadiusToImageView];
-    [cell applyShadowPathToShadow];
+    [cell applyColorWithPatternImageToBackground];
+    [cell doSomeCPUIntensiveThings];
+    
+//    [cell applyShadowPathToShadow];
+//    [cell applyBackgroundColorToLabels];
     
     return cell;
 }

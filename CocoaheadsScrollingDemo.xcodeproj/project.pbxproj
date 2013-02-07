@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A83DCDC116C336B800940ACB /* paper_fibers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A83DCDBD16C336B800940ACB /* paper_fibers@2x.png */; };
+		A83DCDC316C3378600940ACB /* paper_fibers.png in Resources */ = {isa = PBXBuildFile; fileRef = A83DCDC216C3378600940ACB /* paper_fibers.png */; };
 		A891F6B816C3138200107F55 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A891F6B716C3138200107F55 /* UIKit.framework */; };
 		A891F6BA16C3138200107F55 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A891F6B916C3138200107F55 /* Foundation.framework */; };
 		A891F6BC16C3138200107F55 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A891F6BB16C3138200107F55 /* CoreGraphics.framework */; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A83DCDBD16C336B800940ACB /* paper_fibers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper_fibers@2x.png"; sourceTree = "<group>"; };
+		A83DCDC216C3378600940ACB /* paper_fibers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper_fibers.png; sourceTree = "<group>"; };
 		A891F6B416C3138200107F55 /* CocoaheadsScrollingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaheadsScrollingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A891F6B716C3138200107F55 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A891F6B916C3138200107F55 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -149,6 +153,8 @@
 		A891F6BE16C3138200107F55 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A83DCDC216C3378600940ACB /* paper_fibers.png */,
+				A83DCDBD16C336B800940ACB /* paper_fibers@2x.png */,
 				A891F6E916C315DC00107F55 /* feed.plist */,
 				A891F6BF16C3138200107F55 /* CocoaheadsScrollingDemo-Info.plist */,
 				A891F6C016C3138200107F55 /* InfoPlist.strings */,
@@ -191,8 +197,8 @@
 				A891F74E16C3207500107F55 /* SDWebImagePrefetcher.m */,
 				A891F74F16C3207500107F55 /* UIButton+WebCache.h */,
 				A891F75016C3207500107F55 /* UIButton+WebCache.m */,
-				A891F75116C3207500107F55 /* UIImageView+WebCache.h */,
 				A891F75216C3207500107F55 /* UIImageView+WebCache.m */,
+				A891F75116C3207500107F55 /* UIImageView+WebCache.h */,
 			);
 			name = SDWebImage;
 			path = SDWebImage/SDWebImage;
@@ -257,6 +263,8 @@
 				A891F6D416C3138300107F55 /* MainStoryboard_iPad.storyboard in Resources */,
 				A891F6EA16C315DC00107F55 /* feed.plist in Resources */,
 				A891F6FC16C319B000107F55 /* StatusTableViewCell.xib in Resources */,
+				A83DCDC116C336B800940ACB /* paper_fibers@2x.png in Resources */,
+				A83DCDC316C3378600940ACB /* paper_fibers.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,10 +383,12 @@
 		A891F6DB16C3138300107F55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaheadsScrollingDemo/CocoaheadsScrollingDemo-Prefix.pch";
 				INFOPLIST_FILE = "CocoaheadsScrollingDemo/CocoaheadsScrollingDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -386,10 +396,12 @@
 		A891F6DC16C3138300107F55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CocoaheadsScrollingDemo/CocoaheadsScrollingDemo-Prefix.pch";
 				INFOPLIST_FILE = "CocoaheadsScrollingDemo/CocoaheadsScrollingDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

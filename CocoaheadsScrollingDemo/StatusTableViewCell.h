@@ -11,14 +11,20 @@
 @property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *userImageView;
 @property (strong, nonatomic) IBOutlet UIView *shadowView;
+@property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 
 - (void)configureWithStatusDictionary:(NSDictionary *)status;
 
-// Performance killers
+#pragma mark - Performance--
+
 - (void)applyCornerRadiusToImageView;
 - (void)applyShadowToImageView;
+- (void)applyColorWithPatternImageToBackground;
+- (void)doSomeCPUIntensiveThings;
 
-// Performance revivers
+#pragma mark - Performance++
+
 - (void)applyShadowPathToShadow;
+- (void)applyBackgroundColorToLabels;
 
 @end
